@@ -7,6 +7,7 @@ RUN apt-get update -y
 # Install Apache2 WebServer To Deploy a Web Application 
 RUN apt-get install apache2 -y 
 #Copy a Code From Loacal Machine to Inside the default Directory of the server 
-COPY . /app  
+COPY . /app 
+COPY . /var/www/html 
 # Start Apache Web Server 
 ENTRYPOINT apachectl -D FOREGROUND 
